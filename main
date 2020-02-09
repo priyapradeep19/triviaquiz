@@ -1,0 +1,104 @@
+#include <iostream>
+#include "Question.h"
+
+int main() {
+   Question ary[10];//An array that holds ten questions
+   int answer;
+   int totalPoints = 0;//keeping track of points
+
+   cout << "Welcome to GK game! Lets test your General Knowledge!" << endl;
+    cout << "Please enter 1, 2, 3, or 4 to select your choice." << endl;
+   // QUESTION ONE
+   ary[0].setQuestion("What is the Italian word for pie?");
+   ary[0].setAnswer1("1. pie");
+   ary[0].setAnswer2("2. pizza");
+   ary[0].setAnswer3("3. pastry");
+   ary[0].setAnswer4("4. tart");
+   ary[0].setCorrect(2);//correct answer
+   // QUESTION TWO
+   ary[1].setQuestion("Which planest shares its name with a dog?");
+   ary[1].setAnswer1("1. Saturn");
+   ary[1].setAnswer2("2. Mars");
+   ary[1].setAnswer3("3. Pluto");
+   ary[1].setAnswer4("4. Jupiter");
+   ary[1].setCorrect(3);//correct answer
+   // QUESTION THREE
+   ary[2].setQuestion("Which ocean surrounds the Maldives?");
+   ary[2].setAnswer1("1. Pacific Ocean");
+   ary[2].setAnswer2("2. Atlantic Ocean");
+   ary[2].setAnswer3("3. Indian Ocean");
+   ary[2].setAnswer4("4. None of the above");
+   ary[2].setCorrect(3);//correct answer
+   // QUESTION FOUR
+   ary[3].setQuestion("Which sea creature has three hearts?");
+   ary[3].setAnswer1("1. Turtle");
+   ary[3].setAnswer2("2. Pelican eel");
+   ary[3].setAnswer3("3. Octopus");
+   ary[3].setAnswer4("4. Vampire squid");
+   ary[3].setCorrect(3);//correct answer
+   // QUESTION FIVE
+   ary[4].setQuestion("Which instrument has forty seven strings and seven pedals?");
+   ary[4].setAnswer1("1. Harp");
+   ary[4].setAnswer2("2. Violin");
+   ary[4].setAnswer3("3. Guitar");
+   ary[4].setAnswer4("4. Piano");
+   ary[4].setCorrect(1);//correct answer
+   // QUESTION SIX
+   ary[5].setQuestion("Who went to school with a lamb?");
+   ary[5].setAnswer1("1. John");
+   ary[5].setAnswer2("2. Jenny");
+   ary[5].setAnswer3("3. Helen");
+   ary[5].setAnswer4("4. Mary");
+   ary[5].setCorrect(4);//correct answer
+   // QUESTION SEVEN
+   ary[6].setQuestion("I'm called thick when close to ground, but people smile when I'm high. What am I?");
+   ary[6].setAnswer1("1. Cloud");
+   ary[6].setAnswer2("2. Rain");
+   ary[6].setAnswer3("3. Hail");
+   ary[6].setAnswer4("4. Snow");
+   ary[6].setCorrect(1);//correct answer
+   // QUESTION EIGHT
+   ary[7].setQuestion("Available in many sizes and styles and able to halt at many train free stations. What am I?");
+   ary[7].setAnswer1("1. A radio");
+   ary[7].setAnswer2("2. A truck");
+   ary[7].setAnswer3("3. An airplane");
+   ary[7].setAnswer4("4. A train");
+   ary[7].setCorrect(1);//correct answer
+   // QUESTION NINE
+   ary[8].setQuestion("Which type of entertainment has cars but no roads, curves but no figure, and white knuckles?");
+   ary[8].setAnswer1("1. Bumper cars");
+   ary[8].setAnswer2("2. Tea cup ride");
+   ary[8].setAnswer3("3. Rollercoaster");
+   ary[8].setAnswer4("4. All of the above");
+   ary[8].setCorrect(3);//correct answer
+   // QUESTION TEN
+   ary[9].setQuestion("I have a cake and a table named after me. I'm used all around the world. What am I?");
+   ary[9].setAnswer1("1. Tiramisu");
+   ary[9].setAnswer2("2. Coffee");
+   ary[9].setAnswer3("3. Sandwich");
+   ary[9].setAnswer4("4. Cheesecake");
+   ary[9].setCorrect(2);//correct answer
+    
+    
+    for(int i = 0; i < 10; i++) //printing format for each question
+    {
+        cout << ary[i].getQuestion() << endl;
+        cout << ary[i].getAnswer1() << endl;
+        cout << ary[i].getAnswer2() << endl;
+        cout << ary[i].getAnswer3() << endl;
+        cout << ary[i].getAnswer4() << endl;
+        
+        cout << "Please enter an answer choice:" << endl;
+        cin >> answer;
+        if(answer == ary[i].getCorrectAnswer())
+        {
+            cout << "Correct!" << endl;
+            totalPoints++;
+        } else {
+            cout << "Wrong. The correct answer choice is:" << ary[i].getCorrectAnswer() << endl;
+        }
+        
+    }
+    cout << "The total points:" << totalPoints << "/10" << endl;
+    
+}
